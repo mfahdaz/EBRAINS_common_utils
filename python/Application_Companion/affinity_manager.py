@@ -19,7 +19,7 @@ from common_enums import Response
 
 class AffinityManager:
     """
-    Facilitates to manipulate with the affinitry mask for a process.
+    Facilitates to manipulate with the affinity mask for a process.
     """
     def __init__(self, log_settings, configurations_manager,
                  available_cpu_cores=0) -> None:
