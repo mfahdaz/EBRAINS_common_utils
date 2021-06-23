@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-A collection of modules facilitating the general functionalities and thus can be adpated to address many common functional requiremnents. It contains the following modules:
+A collection of modules facilitating the general functionality and thus can be adapted to address many common functional requirements. It contains the following modules:
 
 * <a href="/python/configuration_manager"> Configurations Manager </a>
 * <a href="/python/Application_Companion"> Applicaiton Companion </a>
