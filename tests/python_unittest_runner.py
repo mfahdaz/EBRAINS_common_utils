@@ -8,7 +8,7 @@ import re
 
 class Discover():
     """
-    Discover class collects all unit test case in <path> and recursive directories
+    Discover class collects all unit tests case in <path> and recursive directories
     Collects them in a single large suite.
     Start at supplied <path> an add all tests in files matching the supplied expression and
     all individual tests matching the expression 
@@ -19,7 +19,7 @@ class Discover():
 
     def __init__(self, path, pattern):
 
-        #match with all (used for a filename matches with expression: all individual test must be loaded
+        #match with all (used for a filename matches with expression: all individual tests must be loaded
         allMatcher = re.compile(".*")
         #matcher for the expression
         patternMatcher = re.compile(pattern)
@@ -48,15 +48,15 @@ class Discover():
                     testMatcher = patternMatcher
 
 
-                #create a test suite
+                #create a tests suite
                 fileSuite = unittest.TestSuite()
                 testnames = dir(module)
 
 
 
-                #add all cases ending with test and match the regexp search string
+                #add all cases ending with tests and match the regexp search string
                 for testName in testnames:
-                    if testName.endswith('Test') or testName.endswith('test'):
+                    if testName.endswith('Test') or testName.endswith('tests'):
                         testClass = getattr(module, testName)    #load attribute
                         if inspect.isclass(testClass):           #if class 
                             if not testMatcher.match(testName):  #Continue of current testname does not match supplied expression
@@ -87,17 +87,17 @@ class Discover():
 
 class UnitTesterTest(unittest.TestCase):
     """
-    Self test for the UnitTester
+    Self tests for the UnitTester
     """
-    #TODO: Add propper test suite, creating come files and try laoding it (multiple directories and depths)
+    #TODO: Add propper tests suite, creating come files and try laoding it (multiple directories and depths)
     def setUp(self):
-        self.tester = "A test string"
+        self.tester = "A tests string"
 
     def test_validator(self):
         """
         Check that current testClass is loaded and performed
         """
-        self.assertTrue(self.tester == "A test string")
+        self.assertTrue(self.tester == "A tests string")
 
 
 def usage():
@@ -105,7 +105,7 @@ def usage():
     Display a short overview of available arguments
     """
     usage = r"""Usage: python python_unittest_runner [-p <path = '.'> -e <expression = *>  -h -x]
-    Recursively look in path for unit test classes matching expression.
+    Recursively look in path for unit tests classes matching expression.
     Collect in a single suite and run them
     -p, --path <path> to start looking. Default is '.'
       -e, --exp  <expresion> to match with found classes to perform a subset of the tests

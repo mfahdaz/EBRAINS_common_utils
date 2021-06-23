@@ -1,7 +1,8 @@
-# Copyright 2020 Forschungszentrum Jülich GmbH and Aix-Marseille Université
-# "Licensed to the Apache Software Foundation (ASF) under one or more
-#  contributor license agreements; and to You under the Apache License,
-#  Version 2.0."
+# ------------------------------------------------------------------------------
+#  Copyright 2020 Forschungszentrum Jülich GmbH
+# "Licensed to the Apache Software Foundation (ASF) under one or more contributor
+#  license agreements; and to You under the Apache License, Version 2.0. "
+# ------------------------------------------------------------------------------
 
 from xml.etree import ElementTree
 
@@ -76,14 +77,18 @@ class Parser:
             Dictionary built out of the elements of xml.etree.ElementTree
         """
         xml_dictionary = dict()
-        if parent_element.items():
+        if (len(parent_element)) == 0:
+            # Case: if there is no nested element,
+            # then add it into the dictionary
+            xml_dictionary.update({parent_element.tag: parent_element.text})
+        elif parent_element.items():
             # Case: if the parent element has attributes,
             # then add them into the dictionary
             xml_dictionary.update(dict(parent_element.items()))
         else:
+            # Case: nested elements
             for child_element in parent_element:
                 if child_element:
-                    # Case: nested elements
                     if (len(child_element) == 1 or
                             child_element[0].tag != child_element[1].tag):
                         # Case: If the depth is one or the first two tags
