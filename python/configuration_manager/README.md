@@ -7,7 +7,7 @@ The features it provides include, a centralized management of
 
 * XML parsing and manipulation, 
 * setting up directories, and
-* a uniform format for the log settings.
+* a uniform format for the logs.
 
 ## Basic Description
 

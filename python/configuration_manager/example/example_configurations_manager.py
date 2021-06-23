@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # get path to setup output directory from the XML configuration file
     default_dir = configurations_manager.get_configuration_settings(
-        'output_directory', 'example_settings.xml')
+        'output_directory', 'global_settings.xml')
 
     # setup default directories (Output, Output/Results, Output/Logs,
     # Output/Figures, Output/Monitoring_DATA)
@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     # load log configurations from XML file
     logger_settings = configurations_manager.get_configuration_settings(
-        'log_configurations', 'example_settings.xml')
+        'log_configurations', 'global_settings.xml')
 
     # configure logger with the default settings
     example_logger = configurations_manager.load_log_configurations(name=__name__,

@@ -60,6 +60,7 @@ class DirectoriesManager(metaclass=MetaDirectoriesManager):
         self.__directories.update({DefaultDirectories.MONITORING_DATA:
                                   self.__make_default_directory(
                                       DefaultDirectories.MONITORING_DATA.value)})
+        return output_dir
 
     def get_directory(self, directory):
         """Returns the path for the specified directory.
