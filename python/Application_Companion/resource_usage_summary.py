@@ -14,7 +14,7 @@
 
 class ResourceUsageSummary:
     """
-    Provides the resource usage statistics
+    Provides the summary of the resource usage statistics
     """
     def __init__(self) -> None:
         # NOTE: later it will be extended to also suppport usgae stats of

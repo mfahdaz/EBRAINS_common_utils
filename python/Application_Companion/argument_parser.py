@@ -40,10 +40,8 @@ def application_exists(path_and_appname):
 
 def parse_command_line_arguments(args=None):
     """
-        Parsing the command-line arguments passed to the launcher
-
-        At least one is expected, the XML filename based on which the
-        co-simulation processes will be launched
+        Parses the command-line arguments passed to the
+        modular science manager.
     :return:
         args
     """

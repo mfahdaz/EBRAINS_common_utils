@@ -19,7 +19,7 @@ from resource_usage_summary import ResourceUsageSummary
 
 class Process:
     '''
-    Represents the meta-data for the process executing the applicaiton.
+    Represents the meta-data for the process executing the application.
     This is particulalry useful for later Object Relational Mapping (ORM)
     with Knowledge Grapgh (KG).
     '''

@@ -16,7 +16,7 @@ import os
 
 class MemoryUsage:
     '''
-    Provides the memory usage by a specific process.
+    Provides the memory usage stats for a specific process.
 
     NOTE: For now, it provides the following memory cconsumption details
     (in MiB):
