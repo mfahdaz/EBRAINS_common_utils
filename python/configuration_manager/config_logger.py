@@ -37,11 +37,11 @@ class ConfigLogger:
                                            , False)
         dictionary_utils.set_in_dictionary(xml_dictionary, ['loggers'], {})
         # setup error logs file
-        error_logs_file = cls._make_log_file(target_directory, "error_logs.logs")
+        error_logs_file = cls._make_log_file(target_directory, "errors.log")
         dictionary_utils.set_in_dictionary(xml_dictionary, ['handlers', 'error_file',
                                            'filename'], error_logs_file)
         # setup info logs file
-        info_logs_file = cls._make_log_file(target_directory, "info_logs.logs")
+        info_logs_file = cls._make_log_file(target_directory, "info.log")
         dictionary_utils.set_in_dictionary(xml_dictionary, ['handlers', 'info_file',
                                            'filename'], info_logs_file)
 

@@ -15,7 +15,7 @@ class ConfigurationsManager:
     __directories_manager = DirectoriesManager()
     __parser = Parser()
 
-    def setup_default_directories(self, directory) -> None:
+    def setup_default_directories(self, directory) -> str:
         """Wrapper for setting up default directories"""
         return self.__directories_manager.setup_default_directories(directory)
 

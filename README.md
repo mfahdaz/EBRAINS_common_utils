@@ -46,13 +46,15 @@
 
 ## :dart: About ##
 
-A collection of modules facilitating the general functionalities and thus can be adpated to address many common functional requiremnents. It contains the following modules:
+A collection of modules facilitating the general functionality and thus can be adapted to address many common functional requirements. It contains the following modules:
 
 * <a href="/python/configuration_manager"> Configurations Manager </a>
+* <a href="/python/Application_Companion"> Applicaiton Companion </a>
 ## :sparkles: Features ##
 
 :heavy_check_mark: A Module for centralized management of configuration settings, setting up directories and setting a uniform format for the logging. More details are provided <a href="/python/configuration_manager"> here</a>.
 
+:heavy_check_mark: A lightweight application for managing and monitoring of integrated applications.. More details are provided <a href="/python/Application_Companion"> here</a>.
 
 ## :rocket: Technologies ##
 
